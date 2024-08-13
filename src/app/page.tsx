@@ -98,11 +98,8 @@ export default function Home() {
       {/* Header */}
       <div className="sticky left-0 top-0 w-full py-2.5 px-3.5 bg-white border-b flex items-center">
         <div className="flex items-center">
-          <div className="flex items-center mr-3.5">
-            <div className="w-[25px] mr-1.5">
-              <Image src="/logo.svg" alt="Chirp" width={100} height={100} />
-            </div>
-            <h1 className="font-bold text-xl">Chirp</h1>
+          <div className="w-[30px] mr-2.5">
+            <Image src="/logo.svg" alt="Chirp" width={100} height={100} className="rotate-180" />
           </div>
           <select
             className="rounded px-2.5 py-1.5 outline-none"
@@ -118,8 +115,8 @@ export default function Home() {
         </div>
         <div className="ml-auto">
           {user ? (
-            <div className="bg-black p-2.5 text-white rounded-full cursor-pointer">
-              <FaUser onClick={onMenuOpen} />
+            <div className="bg-black p-2.5 text-white rounded-full cursor-pointer" onClick={onMenuOpen}>
+              <FaUser />
             </div>
           ) : (
             <div>
@@ -158,7 +155,7 @@ export default function Home() {
       <div className="p-5 space-y-5">
         {messages.map((msg, index) => (
           <div key={index} className={`${msg.userId === user?.uid ? "text-right" : "text-left"}`}>
-            <p className="bg-gray-200 inline-block rounded px-3.5 py-2.5">{msg.text}</p>
+            {msg.text && <p className="bg-gray-200 inline-block rounded px-3.5 py-2.5">{msg.text}</p>}
             <p className="text-xs text-gray-400">{msg.userName}</p>
           </div>
         ))}
