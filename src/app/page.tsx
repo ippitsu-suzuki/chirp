@@ -16,7 +16,8 @@ export default function Home() {
 
   return (
     <div>
-      <div className="fixed left-0 top-0 w-full py-2.5 px-3.5 bg-white border-b flex items-center">
+      {/* --- */}
+      <div className="sticky left-0 top-0 w-full py-2.5 px-3.5 bg-white border-b flex items-center">
         <AiOutlineUsb className="text-[32px] mr-2.5" />
         <h1 className="font-bold">テスト</h1>
         <div className="ml-auto bg-black p-2.5 text-white rounded-full cursor-pointer">
@@ -34,6 +35,10 @@ export default function Home() {
           </ul>
         </div>}
       </div>
+      {/* --- */}
+      <div>
+      </div>
+      {/* --- */}
       <div className="fixed left-0 bottom-0 w-full p-5 border-t flex space-x-2.5 z-50 whitespace-nowrap">
         <input placeholder="メッセージを入力" className="w-full border rounded px-3.5 py-2.5 outline-none" />
         <button className="bg-black rounded px-3.5 py-2.5 font-bold text-white outline-none flex items-center">
